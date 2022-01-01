@@ -1,0 +1,472 @@
+<style>@import 'https://fonts.googleapis.com/css?family=Lato:400,700';
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background-image: linear-gradient(
+          115deg,
+          rgba(167, 127, 76, 0.8),
+          rgba(221, 94, 104, 0.7)
+        ),
+        url(https://scontent.fblr8-1.fna.fbcdn.net/v/t1.6435-9/181920164_164790785646590_5871199666750190350_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Zniyx22_UvUAX_culEU&_nc_ht=scontent.fblr8-1.fna&oh=00_AT89srR5xxV9ulxRle2JurfuVMaucAH-tSDXkfDTSgzPgg&oe=61F36EB0);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    #page-wrapper {
+      position: relative;
+    }
+    
+    li {
+      list-style: none;
+    }
+    
+    a {
+      color: rgb(29, 27, 27);
+      text-decoration: none;
+    }
+    
+    /** global classes styling **/
+    
+    .container {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .btn {
+      padding: 0 20px;
+      height: 40px;
+      font-size: 1em;
+      font-weight: 900;
+      color: black;
+      text-transform: uppercase;
+      border: 3px white;
+      background-color: #e6d7d7;
+      box-shadow: 0 0 5px #ff96ad, 0 0 25px
+      #ff96ad,0 0 50px #ff96ad,0 0 200px #c2b3b6;
+      border-radius: 2px;
+     
+      cursor: pointer;
+    }
+    
+    .grid {
+      display: flex;
+    }
+    
+    header {
+      position: relative;
+      top: 0;
+      min-height: 75px;
+      padding: 0px 20px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #eee;
+    }
+    
+    @media (max-width: 600px) {
+      header {
+        flex-wrap: wrap;
+      }
+    }
+    
+    .logo {
+      width: 60vw;
+    }
+    
+    @media (max-width: 650px) {
+      .logo {
+        margin-top: 15px;
+        width: 1%;
+        position: fixed;
+      }
+    }
+    
+    .logo > img {
+      width: 100%;
+      height: 100%;
+      max-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-left: 10px;
+    }
+    
+    @media (max-width: 650px) {
+      .logo > img {
+        margin: 0 auto;
+      }
+    }
+    
+    #nav input[type='submit'] {
+      max-width: 300px;
+      width: 100%;
+      height: 30px;
+      margin: 15px 0;
+      border: 0;
+      color: #eee;
+      background-color: #000000;
+      box-shadow: 0 0 5px #ff96ad, 0 0 25px
+      #ff96ad,0 0 50px #ff96ad,0 0 200px #c2b3b6;
+    }
+    
+    @media (max-width: 650px) {
+      nav {
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 50px;
+      }
+      nav li {
+        padding-bottom: 5px;
+      }
+    }
+    
+    nav > ul {
+      width: 35vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    
+    @media (max-width: 650px) {
+      nav > ul {
+        flex-direction: column;
+      }
+    }
+    
+    #hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 200px;
+      margin-top: 40px;
+    }
+    
+    #hero > h2 {
+      margin-bottom: 20px;
+      word-wrap: break-word;
+    }
+    
+    #hero input[type='email'] {
+      max-width: 300px;
+      width: 100%;
+      padding: 5px;
+    }
+    #hero input[type='number'] {
+      max-width: 300px;
+      width: 100%;
+      padding: 5px;
+      margin: 15px 0;
+    }
+    
+    #hero input[type='submit'] {
+      max-width: 300px;
+      width: 100%;
+      height: 30px;
+      margin: 15px 0;
+      border: 0;
+      color: #eee;
+      background-color: #000000;
+      box-shadow: 0 0 5px #ff96ad, 0 0 25px
+      #ff96ad,0 0 50px #ff96ad,0 0 200px #c2b3b6;
+    }
+    
+    #hero input[type='submit']:hover {
+      background-color: orange;
+      transition: background-color 1s;
+    }
+    
+    @media (max-width: 650px) {
+      #hero {
+        margin-top: 120px;
+      }
+    }
+    
+    #features {
+      margin-top: 30px;
+    }
+    
+    #features .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 125px;
+      width: 20vw;
+      color: darkorange;
+    }
+    
+    @media (max-width: 550px) {
+      #features .icon {
+        display: none;
+      }
+    }
+    
+    #features .desc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 125px;
+      width: 80vw;
+      padding: 5px;
+    }
+    
+    @media (max-width: 550px) {
+      #features .desc {
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        height: 150px;
+      }
+    }
+    
+    @media (max-width: 650px) {
+      #features {
+        margin-top: 0;
+      }
+    }
+    
+    #how-it-works {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    #how-it-works > iframe {
+      max-width: 560px;
+      width: 100%;
+    }
+    
+    #pricing {
+      margin-top: 60px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    .product {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: calc(100% / 3);
+      margin: 10px;
+      border: 1px solid rgb(238, 232, 180);
+      border-radius: 3px;
+    }
+    
+    .product > .level {
+      background-color: #ddd;
+      color: black;
+      padding: 15px 0;
+      width: 100%;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    
+    .product > h2 {
+      margin-top: 15px;
+    }
+    
+    .product > ol {
+      margin: 15px 0;
+    }
+    
+    .product > ol > li {
+      padding: 5px 0;
+    }
+    
+    .product > button {
+      border: 0;
+      margin: 15px 0;
+      background-color: #f1c40f;
+      font-weight: 400;
+    }
+    
+    .product > button:hover {
+      background-color: orange;
+      transition: background-color 1s;
+    }
+    
+    @media (max-width: 800px) {
+      #pricing {
+        flex-direction: column;
+      }
+      .product {
+        max-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+    }
+    
+    footer {
+      margin-top: 30px;
+      background-color: rgba(216, 137, 144, 0.7);
+      padding: 20px;
+    }
+    
+    footer > ul {
+      display: flex;
+      justify-content: flex-end;
+    }
+    
+    footer > ul > li {
+      padding: 0 10px;
+    }
+    
+    footer > span {
+      margin-top: 5px;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 0.9em;
+      color: rgb(20, 20, 20);
+    }
+    </style><link
+  rel="stylesheet"
+  href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+  crossorigin="anonymous"
+/>
+<title>BHARAT VARSHA</title>
+<div id="page-wrapper">
+  <header id="header">
+    <div class="logo">
+     
+      <a href="https://www.youtube.com/channel/UCZxeWRvl6X0Bayc3kZH1UKA/featured">
+        <img alt="Qries" src="product.jpg"  style="width: 50 px; height: 10%; max-width: 300px">
+        </a>
+    </div>
+    
+    <nav id="nav-bar">
+      <ul>
+        <li><a class="nav-link , btn" href="#hero" >Description</a></li>
+        <li><a class="nav-link , btn" href="#features">Sample video</a></li>
+        <li><a class="nav-link , btn" href="#pricing" >SOCIAL LINKS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container"></div>
+
+  <section id="hero">
+    <h2>BHARAT VARSHA</h2>
+    <form id="form" action="https://www.youtube.com/channel/UCZxeWRvl6X0Bayc3kZH1UKA/featured">
+      <input
+        name="email"
+        id="email"
+        type="email"
+        placeholder="Enter your email address"
+        required
+      />
+      <input
+      name="Contact number"
+      id="contactnumber"
+      type="number"
+      placeholder="Enter your mobile number"
+      required
+      />
+      <input id="submit" type="submit" value="Get Started" class="btn" />
+    </form>
+  </section>
+
+  <div class="container">
+    <section id="features">
+      <div class="grid">
+        <div class="icon"><i  class="fas fa-angle-double-right" style="font-size:48px "></i></div>
+        <div class="desc">
+          <h2>Description</h2>
+          <p>
+            Tis is a youtube channel that contains all the information regarding our nation and army.
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="icon">
+          <i class="fas fa-angle-double-right" style="font-size:48px;; color: white"></i></div>
+        <div class="desc">
+          <h2 >
+           YOUTH ORIANTED </h2>
+          <p>
+           
+           Our pages contains many information regarding our culture and behaviour of youth.
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="icon">
+          <i  class="fas fa-angle-double-right" style="font-size:48px ; ; color: green"></i>
+        </div>
+        <div class="desc">
+          <h2>NATIONALITY</h2>
+          <p>
+            Our pages describe nationality .
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="how-it-works">
+      <iframe
+        id="video"
+        height="315"
+        src="https://www.youtube.com/embed/9PzEjFuG4xY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+      ></iframe>
+    </section>
+    <section id="pricing">
+      <div class="product" id="tenor">
+        <div class="level">Facebook</div>
+        <h2>OUR PAGE CONTAINS</h2>
+        <ol>
+          <li>NATIONALITY</li>
+          <li>SPIRITUALITY</li>
+          <li>YOUTH ORIANTED</li>
+          <li>MANY MORE....</li>
+        </ol>
+        <button class="btn"><a href="https://www.facebook.com/RASTRIYAVADIGALU/mentions" class="fa fa-facebook">FACEBOOK</a></button>
+      </div>
+      <div class="product" id="bass">
+        <div class="level">YOUTUBE</div>
+        <h2>OUR CHANNEL CONTAINS</h2>
+        <ol>
+          <li>Ex-ARMY INTERVIEWS</li>
+          <li>BHAGAVDGEETA</li>
+          <li>SOME IMPORTANT ISSUES</li>
+          <li>MANY MORE....</li>
+        </ol>
+        <button class="btn"><a href="https://www.youtube.com/channel/UCZxeWRvl6X0Bayc3kZH1UKA/featured" class="fa fa-facebook">YOUTUBE</a></button>
+      </div>
+      <div class="product" id="valve">
+        <div class="level">INSTAGRAM</div>
+        <h2>OUR PAGE CONTAINS</h2>
+        <ol>
+          <li>NATIONALITY</li>
+          <li>SPIRITUALITY</li>
+          <li>YOUTH ORIANTED</li>
+          <li>MANY MORE....</li>
+        </ol>
+        <button class="btn"><a href="https://www.instagram.com/bharat_varsha001/?utm_source=qr" class="fa fa-facebook">INSTAGRAM</a></button>
+      </div>
+    </section>
+    <footer>
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+        
+      </ul>
+      <span>Copyright 2021 , by siddu bharat varsha</span>
+    </footer>
+  </div>
+</div>
